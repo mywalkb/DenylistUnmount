@@ -1,0 +1,6 @@
+id=denylist_unmount
+name=Denylist Unmount
+version=v0.1
+versionCode=1
+author=mywalkb
+description=Force unmount of processes in denylist

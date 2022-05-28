@@ -1,0 +1,18 @@
+.DS_Store
+*.zip
+*.so
+*.dex
+
+# VS Code Java Language Server
+.settings/
+.project
+.classpath
+*.iml
+.gradle
+/local.properties
+/.idea
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties

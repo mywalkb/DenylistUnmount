@@ -1,0 +1,3 @@
+[submodule "module/jni/libcxx"]
+	path = module/jni/libcxx
+	url = https://github.com/topjohnwu/libcxx.git
