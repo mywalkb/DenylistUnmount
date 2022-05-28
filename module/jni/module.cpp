@@ -1,7 +1,5 @@
 #include <cstdlib>
 #include <string>
-#include <unistd.h>
-#include <fcntl.h>
 #include <android/log.h>
 
 #include "zygisk.hpp"
