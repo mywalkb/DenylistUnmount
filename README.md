@@ -1,4 +1,8 @@
+
 # Denylist Unmount
+
+![Build](https://shields.io/github/workflow/status/mywalkb/DenylistUnmount/Main?event=push&logo=github&label=Build) [![Download](https://img.shields.io/github/v/release/mywalkb/DenylistUnmount?color=orange&logoColor=orange&label=Download&logo=DocuSign)](https://github.com/mywalkb/DenylistUnmount/releases/latest) [![Total](https://shields.io/github/downloads/mywalkb/DenylistUnmount/total?logo=Bookmeter&label=Counts&logoColor=yellow&color=yellow)](https://github.com/mywalkb/DenylistUnmount/releases)
+
 
 Magisk module to unmount the denylist processes
 
@@ -12,8 +16,8 @@ Is good for many cases. Magisk is hidden and can continue to inject code with LS
 ## How to use
 
 - enable zygisk
-- disable enforce zygisk
-- put app in denylist
+- disable "Enforce DenyList"
+- put app in DenyList
 
 every app in denylist before start unmount magisk, so app can't detect magisk
 
