@@ -1,6 +1,7 @@
 #include <cstdlib>
 #include <string>
 #include <android/log.h>
+#include <sys/system_properties.h>
 
 #include "zygisk.hpp"
 #include "module.h"
@@ -34,9 +35,15 @@ public:
 private:
     zygisk::Api *api;
     JNIEnv *env;
+    
 
     void preSpecialize(std::string process) {
-        if ((api->getFlags() & zygisk::PROCESS_ON_DENYLIST) != 0) {
+        char whitelist[255];
+        __system_property_get("persist.unmount.white",whitelist);
+        
+        if (strcmp(whitelist,"true") == 0 && (api->getFlags() & zygisk::PROCESS_GRANTED_ROOT) == 0){
+            api->setOption(zygisk::FORCE_DENYLIST_UNMOUNT);
+        } else if ((api->getFlags() & zygisk::PROCESS_ON_DENYLIST) != 0) {
             api->setOption(zygisk::FORCE_DENYLIST_UNMOUNT);
         }
         api->setOption(zygisk::DLCLOSE_MODULE_LIBRARY);
