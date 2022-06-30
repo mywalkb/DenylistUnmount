@@ -21,6 +21,14 @@ Is good for many cases. Magisk is hidden and can continue to inject code with LS
 
 every app in denylist before start unmount magisk, so app can't detect magisk
 
+## Whitelist based
+
+Switch to whilelist: `setprop persist.unmount.white true`  
+Turn off whilelist: `resetprop --delete persist.unmount.white`
+
+Only app with granted root access will not have Magisk unmounted.  
+Whitelist mode might slowed down system, only use if necessary
+
 ## Credits
 
 - [Magisk](https://github.com/topjohnwu/Magisk/): makes all these possible
