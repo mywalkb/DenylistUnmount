@@ -1,0 +1,2 @@
+allow zygote adb_data_file dir { search }
+allow zygote unlabeled file { getattr }

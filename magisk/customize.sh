@@ -51,6 +51,7 @@ fi
 
 extract "$ZIPFILE" 'module.prop'        "$MODPATH"
 extract "$ZIPFILE" 'service.sh'         "$MODPATH"
+extract "$ZIPFILE" 'sepolicy.rule'      "$MODPATH"
 
 ui_print "- Extracting zygisk libraries"
 if [ "$ARCH" = "arm" ] || [ "$ARCH" = "arm64" ] ; then

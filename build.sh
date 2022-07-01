@@ -28,7 +28,7 @@ do
 done
 
 pushd magisk
-for FILE in module.prop service.sh customize.sh verify.sh
+for FILE in module.prop service.sh customize.sh verify.sh sepolicy.rule
 do
     sumfile $FILE
 done
