@@ -23,8 +23,8 @@ every app in denylist before start unmount magisk, so app can't detect magisk
 
 ## Whitelist based
 
-Switch to whilelist: `setprop persist.unmount.white true`  
-Turn off whilelist: `resetprop --delete persist.unmount.white`
+Switch to whilelist: `touch /data/adb/modules/denylist_unmount/whitelist`  
+Turn off whilelist: `rm /data/adb/modules/denylist_unmount/whitelist`
 
 Only app with granted root access will not have Magisk unmounted.  
 Whitelist mode might slowed down system, only use if necessary

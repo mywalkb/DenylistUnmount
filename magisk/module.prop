@@ -1,7 +1,7 @@
 id=denylist_unmount
 name=Denylist Unmount
-version=v0.3
-versionCode=3
+version=v0.4
+versionCode=4
 author=mywalkb
 description=Force unmount of processes in denylist
 updateJson=https://raw.githubusercontent.com/mywalkb/DenylistUnmount/main/update.json
