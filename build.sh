@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+SHA256SUM=sha256sum
+if [ $(uname) = "Darwin" ]
+then
+    SHA256SUM="shasum -a 256"
+fi
+
 set -euo pipefail
 
 build_mode="${1:-release}"
@@ -16,7 +22,7 @@ ndk-build -j4 NDK_DEBUG=$debug_mode
 popd
 
 sumfile() {
-    SUM=$(sha256sum "$1" | awk '{print $1}')
+    SUM=$($SHA256SUM "$1" | awk '{print $1}')
     echo -n $SUM > "$1.sha256"
 }
 
